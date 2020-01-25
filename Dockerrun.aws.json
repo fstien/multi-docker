@@ -1,0 +1,29 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "fstien/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "fstien/multi-nginx",
+            "hostname": "nginx",
+            "essential": true
+        },
+        {
+            "name": "server",
+            "image": "fstien/multi-server",
+            "hostname": "api",
+            "essential": false
+        },   
+        {
+            "name": "worker",
+            "image": "fstien/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        }
+    ]
+}
