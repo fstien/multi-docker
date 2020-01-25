@@ -22,3 +22,20 @@ after_success:
     - docker push fstien/multi-nginx
     - docker push fstien/multi-server
     - docker push fstien/multi-worker
+
+
+
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: eu-west-2
+    app: multi-docker
+    env: MultiDocker-env
+    bucket_name: elasticbeanstalk-eu-west-2-219936714486
+    bucket_path: docker-multi
+    on: 
+        branch: master
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: 
+            secure: $AWS_SECRET_KEY
+
