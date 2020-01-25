@@ -63,7 +63,7 @@ class Fib extends Component {
           />
           <button>Submit</button>
         </form>
-
+        <h1> Fib calc</h1>
         <h3>Indexes I have seen:</h3>
         {this.renderSeenIndexes()}
 
